@@ -1,6 +1,8 @@
+//Aqui es donde se ejecuta todo.
+//El orden de la importaciones afecta. 
 import express from "express";
-import "dotenv/config.js"
-import "./config/database.js"
+import "dotenv/config.js"//doten para poder utilizar variables de entorno 
+import "./config/database.js"//este el archico que importamos desde database.js 
 import cors from 'cors'
 import morgan from "morgan";
 import indexRouter from './router/index.js'
