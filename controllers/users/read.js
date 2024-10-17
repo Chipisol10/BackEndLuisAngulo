@@ -11,7 +11,7 @@ try{
 }
 }
 
-let userByRole = async(req,res) =>{
+let userByRole = async(req,res,next) =>{
     try{
         
         let roleQuery = req.params.x
