@@ -10,7 +10,7 @@ let url = process.env.URI_MONGO//Direccion de la base de datos, El URI_MONGO est
 
 async function coneccionBaseDeDatos() {
     try{
-        await mongoose.connect(process.env.URI_MONGO)
+        await mongoose.connect(url)
         console.log("Base de datos conectada")
     } catch (error) {
         console.log(error);
