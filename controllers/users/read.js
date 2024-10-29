@@ -1,5 +1,6 @@
 import User from "../../models/User.js"
 
+
 let allUser = async(req,res,next) =>{
 try{
     let {name,role} = req.query
@@ -19,7 +20,7 @@ try{
     //$exists : true
     //$size: 4
     
-    let all = await User.find(query)  
+    let all = await User.find(query).populate('auto','marca').exec();  
     return res.status(200).json({
         response: all
     })
